@@ -5,7 +5,7 @@ from data import Data
 class Search:
     def __init__(self,flask_request):
         self.db = Data(flask_request)
-        self.DEVELOPER_KEY = "AIzaSyDkwfihxOsnd2XRRyJOhQTNDS8TVSKVjik"
+        self.DEVELOPER_KEY = "" #your youtube v3 api
         self.YOUTUBE_API_SERVICE_NAME = "youtube"
         self.YOUTUBE_API_VERSION = "v3"
 
@@ -95,5 +95,6 @@ class Search:
             if e.resp.status == 403 and "quota" in str(e):
                 print("API quota exceeded. Redirecting to /error.")
                 return None
+
 
         return channel_videos
