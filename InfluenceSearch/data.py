@@ -29,5 +29,5 @@ class Data:
             "Country": self.country,
             "Region": self.region,
             "City": self.city,
-
         }
+
