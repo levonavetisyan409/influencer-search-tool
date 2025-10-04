@@ -3,7 +3,7 @@ import requests
 
 class Data:
     def __init__(self, flask_request):
-        self.client = MongoClient("mongodb://frozy:admin12@ac-puc2pbz-shard-00-00.v2thrmo.mongodb.net:27017,ac-puc2pbz-shard-00-01.v2thrmo.mongodb.net:27017,ac-puc2pbz-shard-00-02.v2thrmo.mongodb.net:27017/?ssl=true&replicaSet=atlas-fle5nk-shard-0&authSource=admin&retryWrites=true&w=majority")
+        self.client = MongoClient() #your database link
         self.db = self.client['users']
         self.collection = self.db['search']
         self.collection1 = self.db['visitors']
@@ -29,4 +29,5 @@ class Data:
             "Country": self.country,
             "Region": self.region,
             "City": self.city,
+
         }
